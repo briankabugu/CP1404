@@ -1,0 +1,18 @@
+BoxLayout:
+    orientation: 'horizontal'  # Changed orientation to display left-to-right
+    TextInput:
+        id: input_number
+        text: '7'
+        font_size: 48
+        multiline: False
+    Button:
+        text: 'Square'
+        # the following line specifies the function in the app class to call when the button is pressed
+        on_press: app.handle_calculate(input_number.text)
+    BoxLayout:
+        orientation: 'vertical'  # Changed orientation for nested layout
+        Label:
+            id: output_label
+            text: 'Enter a number and press "Square"'
+            font_size: 38
+            color: (1, 0.4, 0.7, 1)  # Changed color to pink
